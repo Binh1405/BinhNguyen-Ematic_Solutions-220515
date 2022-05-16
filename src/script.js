@@ -1,8 +1,9 @@
 //TASK 3
 import mailchimp from "@mailchimp/mailchimp_marketing";
+import "dotenv/config";
 mailchimp.setConfig({
-  apiKey: "14983c6c4aef2dd6201c8b61e8fa5942-us14",
-  server: "us14",
+  apiKey: process.env.MAILCHIMP_APIKEY,
+  server: process.env.MAILCHIMP_SERVER,
 });
 
 //3.1 Create a new list using Mailchimp's RESTful API. Free account can only have 1 list/audience
@@ -72,7 +73,7 @@ const updateMember = async () => {
   console.log("response", response);
   return response;
 };
-updateMember();
+// updateMember();
 
 //3.5 Update one of the email address from subscribed to unsubscribed
 const updateMemberEmail = async () => {
@@ -86,4 +87,4 @@ const updateMemberEmail = async () => {
   );
   console.log("unsubscribed", response);
 };
-updateMemberEmail();
+// updateMemberEmail();
