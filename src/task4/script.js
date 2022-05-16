@@ -41,7 +41,7 @@ function dumpData(avalableEmails = []) {
 }
 dumpData(["user1", "user2", "user3", "user4", "user5", "user6"]);
 
-//Potential result is "userData" object with the number of users equal to availbleEmails array length
+//Result is "userData" object with the 6 available emails from email.csv file with the structure below:
 //For ex: userData = {
 //users: [
 //{user1: {email:"user1@..", dataFields: {interested: {categories: ["low-fi", "jazz"]}}}},
