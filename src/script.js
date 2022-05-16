@@ -1,6 +1,8 @@
 //TASK 3
 import mailchimp from "@mailchimp/mailchimp_marketing";
 import "dotenv/config";
+console.log("apikey", process.env.MAILCHIMP_APIKEY);
+console.log("apikey", process.env.MAILCHIMP_SERVER);
 mailchimp.setConfig({
   apiKey: process.env.MAILCHIMP_APIKEY,
   server: process.env.MAILCHIMP_SERVER,
